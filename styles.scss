@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&family=Quicksand&display=swap');
+
+$transp-black: rgba(0, 0, 0, 0.5);
+
+body {
+	font-family: 'Quicksand', sans-serif;
+	margin: 0;
+	color: #000;
+}
+
+header {
+	background-image: url("images/service-g7b8396aa1_1280(2).jpg");
+	padding-bottom: 5rem;
+	background-size: cover;
+	
+	&:after {
+		content: '';
+		background-color: rgba(0, 0, 0, 0.5);
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+	}
+}
+
+.intro {
+	margin: auto;
+	text-align: center;
+	align-items: center;
+	padding-top: 5rem;
+	padding: 5rem;
+
+	h1, h2, h3 {
+		font-family: 'Playfair Display', serif;
+		color: #fff;
+		font-size: calc(1em + 8vw);
+	}
+
+	p {
+		margin-top: -4rem;
+		color: #fff;
+		font-size: calc(1em + 2vw);
+	}
+}
+
+nav {
+	padding: 1rem;
+	background-color: #000;
+	background-color: $transp-black;
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+
+	a {
+		padding: 0.5rem 1rem;
+		color: #fff;
+		text-decoration: none;
+		font-size: calc(1em + 0.2vw);
+	}
+}
+
+.features {
+	div {
+		display: flex;
+		font-size: calc(1em + 0.4vw);
+	}
+
+	.text {
+		padding-inline: 0.5rem;
+		width: 100%;
+	}
+
+	.image {
+		width: 100;
+		display: block;
+	}
+}
+
+footer {
+	background-color: #181D31;
+	color: #fff;
+	padding: 3rem;
+	display: flex;
+	justify-content: center;
+	font-size: calc(1em + 0.7vw);
+
+	div {
+		margin: 0 1rem;
+		display: block;
+	}
+
+	form {
+		display: inline-block;
+	}
+}
+
+/*
+	======
+	General styles
+	======
+*/
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+input[type=text] {
+	padding: 0.5rem 0.6rem;
+	width: 20vw;
+}
+
+button {
+	padding: 0.5rem 1rem;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+@media (max-width: 60em) {
+	.intro p {
+		margin-top: -2rem;
+	}
+
+	.intro {
+		padding: 3rem;
+	}
+}
+
+@media (max-width: 35em) {
+	.intro p {
+		margin-top: -1rem;
+	}
+
+	.intro {
+		padding: 2rem;
+	}
+
+	button {
+		width: 26.5vw;
+	}
+}
