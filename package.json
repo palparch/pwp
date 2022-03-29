@@ -1,0 +1,20 @@
+{
+  "name": "pwp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scripts.js",
+  "scripts": {
+    "devStart": "npx browser-sync start --server --files '*.css' 'index.html'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heytuilip/pwp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heytuilip/pwp/issues"
+  },
+  "homepage": "https://github.com/heytuilip/pwp#readme"
+}

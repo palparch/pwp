@@ -27,17 +27,16 @@ header {
 	margin: auto;
 	text-align: center;
 	align-items: center;
-	padding-top: 5rem;
-	padding: 5rem;
+	padding: 2rem;
 
 	h1, h2, h3 {
 		font-family: 'Playfair Display', serif;
 		color: #fff;
-		font-size: calc(1em + 8vw);
+		font-size: 6em;
 	}
 
 	p {
-		margin-top: -4rem;
+		margin-top: calc(-2em + 4vw);
 		color: #fff;
 		font-size: calc(1em + 2vw);
 	}
@@ -65,12 +64,12 @@ nav {
 	}
 
 	.text {
-		padding-inline: 0.5rem;
+		padding-inline: 1rem;
 		width: 100%;
 	}
 
 	.image {
-		width: 100;
+		width: 105%;
 		display: block;
 	}
 }
@@ -84,7 +83,7 @@ footer {
 	font-size: calc(1em + 0.7vw);
 
 	div {
-		margin: 0 1rem;
+		margin-inline: 1rem;
 		display: block;
 	}
 
@@ -111,7 +110,15 @@ input[type=text] {
 }
 
 button {
-	padding: 0.5rem 1rem;
+	padding: 0.65rem 1.15rem;
+	border-radius: 0.2rem;
+	border: none;
+	background-color: #ccc;
+	color: #000;
+
+	&:hover {
+		background-color: #fff;
+	}
 }
 
 a {
@@ -128,26 +135,28 @@ img {
 	width: 100%;
 }
 
-@media (max-width: 60em) {
-	.intro p {
-		margin-top: -2rem;
+@media (max-width: 40em) {
+	.intro {
+		padding: 1rem;
+		padding-top: 3rem;
+
+		h1, h2, h3 {
+			font-size: 3em;
+		}
+
+		p {
+			margin-top: -2rem;
+			font-size: 1.4em;
+		}
 	}
 
-	.intro {
-		padding: 3rem;
+	.features {
+		font-size: 0.8em;
 	}
 }
 
-@media (max-width: 35em) {
-	.intro p {
-		margin-top: -1rem;
-	}
-
-	.intro {
-		padding: 2rem;
-	}
-
-	button {
-		width: 26.5vw;
+@media (min-width: 35em) {
+	div:nth-child(even) .text {
+		order: 1;
 	}
 }
