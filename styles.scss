@@ -44,7 +44,6 @@ header {
 
 nav {
 	padding: 1rem;
-	background-color: #000;
 	background-color: $transp-black;
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
@@ -53,14 +52,24 @@ nav {
 		padding: 0.5rem 1rem;
 		color: #fff;
 		text-decoration: none;
-		font-size: calc(1em + 0.2vw);
+		font-size: 1.1em;
 	}
 }
 
 .features {
 	div {
-		display: flex;
-		font-size: calc(1em + 0.4vw);
+		display: inline-grid;
+		width: 100%;
+		grid-template-columns: repeat(auto-fit, minmax(16rem, 3fr));
+		font-size: 2vw;
+
+		@media (min-width: 32em) {
+			&:nth-child(odd) {
+				.image {
+					order: 2;
+				}
+			}
+		}
 	}
 
 	.text {
@@ -69,7 +78,7 @@ nav {
 	}
 
 	.image {
-		width: 105%;
+		width: 100%;
 		display: block;
 	}
 }
@@ -153,10 +162,9 @@ img {
 	.features {
 		font-size: 0.8em;
 	}
-}
 
-@media (min-width: 35em) {
-	div:nth-child(even) .text {
-		order: 1;
-	}
+	// div:nth-child(even) .text {
+	// 	display: flex;
+	// 	order: 1;
+	// }
 }
